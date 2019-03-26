@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "IFLYSMC"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "讯飞语音"
   s.description  = <<-DESC
                     讯飞语音SDK
@@ -13,12 +13,19 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/chaopengCoder/IFLYSMC.git", :tag => "#{s.version}" }
-
-
-  s.vendored_frameworks = 'Source/iflyMSC.framework'
-  s.libraries = 'c++', 'z'
-  s.frameworks = 'AVFoundation', 'SystemConfiguration', 'Foundation', 'CoreTelephony', 'AudioToolbox', 'UIKit', 'CoreLocation', 'Contacts', 'AddressBook', 'QuartzCore', 'CoreGraphics'
   s.requires_arc = true
+
+  s.vendored_frameworks ='Source/*.framework'
+
+  s.frameworks = 'AVFoundation','SystemConfiguration','Foundation','CoreTelephony','AudioToolbox','UIKit','CoreLocation','Contacts','AddressBook','QuartzCore','CoreGraphics'
+
+  s.library = 'z','c++','icucore'
+
+  s.license      = {
+        :type => 'Copyright',
+        :text => <<-LICENSE
+        Copyright 2018 chaopeng_coder.com. All rights reserved.
+        LICENSE
+    }
 
 end
