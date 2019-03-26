@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "IFLYSMC"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "讯飞语音"
   s.description  = <<-DESC
                     讯飞语音SDK
