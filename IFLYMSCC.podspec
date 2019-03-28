@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "IFLYMSCC"
-  s.version      = "1.1.3"
+  s.version      = "1.1.4"
   s.summary      = "讯飞语音"
   s.description  = <<-DESC
                     科大讯飞 iOS
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'Source/iflyMSC.framework'
 
-  s.xcconfig            = { "LIBRARY_SEARCH_PATHS" => "\"$(PODS_ROOT)/iflyMSCKit/**\"" }
+  s.xcconfig            = { "LIBRARY_SEARCH_PATHS" => "\"$(PODS_ROOT)/IFLYMSCC/**\"" }
 
   s.frameworks = 'AVFoundation','SystemConfiguration','Foundation','CoreTelephony','AudioToolbox','UIKit','CoreLocation','Contacts','AddressBook','QuartzCore','CoreGraphics'
   s.libraries = 'z','c++','icucore'
