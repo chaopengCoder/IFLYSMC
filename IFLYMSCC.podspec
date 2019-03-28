@@ -17,10 +17,10 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'Source/iflyMSC.framework'
 
-  s.xcconfig            = { "LIBRARY_SEARCH_PATHS" => "\"$(PODS_ROOT)/IFLYMSCC/**\"" }
+  s.xcconfig            = { "LIBRARY_SEARCH_PATHS" => "\"$(PODS_ROOT)/iflyMSCKit/**\"" }
 
   s.frameworks = 'AVFoundation','SystemConfiguration','Foundation','CoreTelephony','AudioToolbox','UIKit','CoreLocation','Contacts','AddressBook','QuartzCore','CoreGraphics'
-  s.libraries = 'z', 'c++', 'icucore'
+  s.libraries = 'z','c++','icucore'
 
   s.requires_arc = false
 
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   touch Source/iflyMSC.framework/Modules/module.modulemap
   cat <<-EOF > Source/iflyMSC.framework/Modules/module.modulemap
   framework module iflyMSC {
-header "IFlyAudioSession.h"
+    header "IFlyAudioSession.h"
     header "IFlyDataUploader.h"
     header "IFlyDebugLog.h"
     header "IFlyISVDelegate.h"
@@ -54,9 +54,7 @@ header "IFlyAudioSession.h"
     header "IFlyUserWords.h"
     header "IFlyVoiceWakeuper.h"
     header "IFlyVoiceWakeuperDelegate.h"
-
       export *
-
       link "z"
       link "c++"
   }
