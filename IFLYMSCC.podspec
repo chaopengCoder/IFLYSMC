@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   touch Source/iflyMSC.framework/Modules/module.modulemap
   cat <<-EOF > Source/iflyMSC.framework/Modules/module.modulemap
   framework module iflyMSC {
-    header "IFlyAudioSession.h"
+header "IFlyAudioSession.h"
     header "IFlyDataUploader.h"
     header "IFlyDebugLog.h"
     header "IFlyISVDelegate.h"
@@ -54,11 +54,12 @@ Pod::Spec.new do |s|
     header "IFlyUserWords.h"
     header "IFlyVoiceWakeuper.h"
     header "IFlyVoiceWakeuperDelegate.h"
+
       export *
+
       link "z"
       link "c++"
   }
   \EOF
   EOF
-  
 end
